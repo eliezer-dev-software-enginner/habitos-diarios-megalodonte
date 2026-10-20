@@ -23,6 +23,10 @@ Project with Gradle Files** to refresh the local framework modules.
 
 Add, complete, and remove daily habits. Habits persist on the device; completion resets when the local date changes.
 
-Add a habit, then enter its displayed number to toggle completion or remove it.
+The Java host registers `/habits` and `/new` with Megalodonte's `AndroidRouter`.
+Each route creates a separate native `ScreenComponent`; `HabitStore` shares the
+saved habits between them. Tap **Novo hábito**, enter a name, and save to return
+to the list. Enter a displayed number to toggle completion or remove it. The
+Voltar button and Android Back return from the form to the list.
 
 The project was generated with `megalodonte-cli --platform android --mode native` and then completed as a functional sample. Run `./gradlew :app:assembleDebug :app:lintDebug :app:check` to validate it. The UI is native Android through Megalodonte; no WebView is used.
