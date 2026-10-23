@@ -24,8 +24,10 @@ public final class HabitStore {
     }
 
     public int count() { return habits.length(); }
+    /** Adds a habit, replacing line breaks with spaces so its name occupies one list row. */
     public void add(String name) {
-        try { habits.put(new JSONObject().put("name", name).put("done", false)); }
+        String singleLineName = name.replaceAll("\\R+", " ");
+        try { habits.put(new JSONObject().put("name", singleLineName).put("done", false)); }
         catch (JSONException error) { throw new IllegalStateException(error); }
         save();
     }
