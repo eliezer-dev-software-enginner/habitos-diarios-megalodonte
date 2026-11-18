@@ -6,7 +6,7 @@ The app uses Java screens and Megalodonte's Android bridge. It does not use a We
 
 ## Requirements and build
 
-- JDK 25, Android SDK Platform 35, and an Android SDK configured for Gradle.
+- JDK 17, Android SDK Platform 35, and an Android SDK configured for Gradle.
 - Checkouts of `megalodonte-android`, `megalodonte-core`, `megalodonte-theme`, and `megalodonte-reactivity-portable`. These framework projects are required by `settings.gradle.kts` and are not included here.
 
 By default, Gradle looks for `megalodonte-android` at `../../framework/megalodonte-android` relative to this repository. The other three checkouts must be in `../../framework/libraries/`, each in a directory matching its project name. Alternatively, set `MEGALODONTE_ANDROID_HOME` to the `megalodonte-android` checkout; the other checkouts must then be under `../libraries/` relative to it.
